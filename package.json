@@ -6,13 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "submodule:dependencies": "yarn "
   },
   "dependencies": {
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "shared": "file:src/components/shared"
+    "shared": "./src/components/shared/package"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
