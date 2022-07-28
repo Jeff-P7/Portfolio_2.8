@@ -3,7 +3,8 @@ import IHeader from './header';
 import HeaderProps from './header.props';
 import classNames from 'classnames';
 import { classesToString, purgeEmptyProps } from '../../shared';
-import { Div, Text } from '../../atomicUI/atoms';
+import { Div, Text, Image } from '../../shared/atomicUI/atoms';
+import { Container, Row, Col } from '../../shared/grids';
 
 interface IProps extends IHeader {}
 
@@ -18,15 +19,18 @@ export const Header: FC<IProps> = (props): JSX.Element => {
   const componentStyles: Record<string, any> = { ...styles };
   const attr: Record<string, any> | null = purgeEmptyProps(properties);
   return (
-    <Div
-      classes={classNames(componentClasses)}
-      styles={componentStyles}
-      {...(attr && { ...attr })}
+    <header
+      // classes={classNames(componentClasses)}
+      // styles={componentStyles}
+      // {...(attr && { ...attr })}
     >
-      <Text size="8xl" align="center">
-        WHy, hellO theRe {children}
-      </Text>
-    </Div>
+      <Container fluid>
+        <Row justify="between" colorize>
+          <Col size={1} colorize><Image src="/logo_full.png" size={60}/></Col>
+          <Col size={6} colorize>Navigation</Col>
+        </Row>
+      </Container>
+    </header>
   );
 };
 

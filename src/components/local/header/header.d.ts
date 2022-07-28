@@ -1,5 +1,5 @@
 import type { ICommon } from '../../shared';
 
-export interface ITemplate extends ICommon {}
+export interface IHeader extends ICommon {}
 
-export default ITemplate;
+export default IHeader;

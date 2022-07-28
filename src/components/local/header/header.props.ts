@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ITemplate from './template';
+import IHeader from './header';
 import type { IPropDefines } from '../../shared';
 import { CommonProps } from '../../shared';
 
@@ -10,9 +10,9 @@ import { CommonProps } from '../../shared';
  * @extends {IPropDefines}
  */
 interface IProps extends IPropDefines {
-  type: { [key in keyof ITemplate]: any };
-  default: ITemplate;
-  argType: { [key in keyof ITemplate]: any };
+  type: { [key in keyof IHeader]: any };
+  default: IHeader;
+  argType: { [key in keyof IHeader]: any };
 }
 
 const {
@@ -28,7 +28,7 @@ const {
   string,
 } = PropTypes;
 
-export const TemplateProps: IProps = {
+export const HeaderProps: IProps = {
   type: {
     ...CommonProps.type,
   },
@@ -40,4 +40,4 @@ export const TemplateProps: IProps = {
   },
 };
 
-export default TemplateProps;
+export default HeaderProps;
