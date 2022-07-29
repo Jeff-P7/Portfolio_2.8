@@ -6,10 +6,9 @@ import { Div } from "../../../shared/atomicUI";
 // import classNames from 'classnames';
 
 const HeaderNav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const handleMenuToggle = () => setIsMenuOpen(!isMenuOpen);
-
+  debugger;
   return (
     <>
       <Div classes="inline-block" colorize>
