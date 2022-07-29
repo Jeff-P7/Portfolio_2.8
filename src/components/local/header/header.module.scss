@@ -1,0 +1,190 @@
+/**
+* Example of property order and category naming convention for comment
+********************************************************************************
+* .class {
+*  //________________________- Font & Text
+*    text-align: val;
+*    text-shadow: val;
+*  //________________________- Color & Background
+*    background-color: val;
+*    color: val;
+*    opacity: val;
+*  //________________________- Box
+*    height: val;
+*    width: val;
+*    border-radius: val;
+*  //________________________- Positioning
+*    position: absolute;
+*    bottom: 0;
+*  //________________________- List
+*    property: val;
+*  //________________________- Table
+*    property: val;
+*  //________________________- Miscellaneous
+*    property: val;
+*  //________________________- Effect
+*    property: val;
+* }
+*/
+
+// Imports ____________________________________________________________________-
+// @import './../../../styles/_palette.scss';
+
+/*******************************************************************************
+* Default |
+*********/
+
+.header {
+  position: relative;
+  display: block;
+  padding: 15px;
+  overflow-x: hidden;
+}
+
+.header__logo {
+  display: inline-block;
+
+  img {
+    width: 100%;
+    max-width: 70px;
+    height: auto;
+  }
+}
+
+.header__nav {
+  float: right;
+  padding-top: 0.4rem;
+}
+
+.header__nav__list {
+  display: inline-block;
+}
+
+.header__nav__burger {
+  display: inline-block;
+  float: right;
+  padding: 8px;
+
+  // Purpose of after pseudo selector is to cover the slide in view of the nav
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    height: inherit;
+    width: 100%;
+    background-color: inherit;
+  }
+}
+
+.burger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.burger span {
+  position: relative;
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transform-origin: 97%;
+  transition: all 0.3s linear;
+
+  &:nth-child(2) {
+    right: -50%;
+  }
+}
+
+// Overriding burger mid bar to push right 50%
+// .header__nav__burger button {
+//   span:nth-child(2) {
+//     right: -50%;
+//   }
+// }
+
+// Special Classes ____________________________________________________________-
+.header__void {
+  display: inline-block;
+}
+
+// Animation ______________________________________________________________________
+
+// Overriding burger mid bar to push right 50%
+.burger,
+.burger:hover {
+  span:nth-child(2) {
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+// Active ______________________________________________________________________
+
+.burger_active span {
+  &:first-child {
+    transform: rotate(-45deg);
+  }
+
+  &:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  &:last-child {
+    transform: rotate(45deg);
+  }
+}
+
+// Hover ______________________________________________________________________-
+
+// Overriding burger mid bar to push right 50%
+.burger:hover {
+  span:nth-child(2) {
+    right: 0;
+  }
+}
+
+// Layouts ____________________________________________________________________-
+
+// Media Sizes ________________________________________________________________-
+
+/*******************************************************************************
+  * XS |
+  ****/
+
+//@include mq('xs') {
+//
+//}
+
+/*******************************************************************************
+  * SM |
+  ****/
+
+//@include mq('sm') {
+//
+//}
+
+/*******************************************************************************
+  * MD |
+  ****/
+
+//@include mq('md') {
+//
+//}
+
+/*******************************************************************************
+  * LG |
+  ****/
+
+//@include mq('lg') {
+//
+//}
