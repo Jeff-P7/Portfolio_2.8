@@ -1,9 +1,5 @@
-import React, { FC } from 'react';
-// import IHeader from './header.d';
-// import HeaderProps from './header.props';
-// import classNames from "classnames";
-// import { classesToString, purgeEmptyProps } from '../../sharedglobal';
-import { Div, Text } from '../../../shared/atomicUI/atoms';
+import React, { FC, useState } from 'react';
+import { Div } from '../../../shared/atomicUI/atoms';
 
 // import { Tabs, Tab, Slide, Fade } from "@mui/material";
 import Tabs from '@mui/material/Tabs';
@@ -54,22 +50,22 @@ interface IProps {
 /**
  * Header Component
  */
-export const Header: FC<IProps> = ({ isOpen = false }): JSX.Element => {
-  const [value, setValue] = React.useState(0);
+export const HeaderNavTabs: FC<IProps> = ({ isOpen = false }): JSX.Element => {
+  const [tab, setTab] = useState<number>(0);
 
-  const handleChange = (event: any, newValue: number) => {
-    setValue(newValue);
+  const handleChange = (event: EventListener, newTab: number) => {
+    setTab(newTab);
   };
 
   return (
-    <Div colorize>
+    <div>
       <Slide direction="left" in={isOpen} mountOnEnter unmountOnExit>
         {/** reason for this div and the other below is to avoid the component from crashing given it does not work well when StyledTab is the direct child of Slide or Fade*/}
         <div>
           <Fade in={isOpen}>
             <div>
               <StyledTabs
-                value={value}
+                value={tab}
                 onChange={handleChange}
                 aria-label="styled tabs example"
               >
@@ -84,11 +80,8 @@ export const Header: FC<IProps> = ({ isOpen = false }): JSX.Element => {
           </Fade>
         </div>
       </Slide>
-    </Div>
+    </div>
   );
 };
 
-// Header.propTypes = HeaderProps.type;
-// Header.defaultProps = HeaderProps.default;
-
-export default Header;
+export default HeaderNavTabs;

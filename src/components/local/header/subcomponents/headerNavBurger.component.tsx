@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { arrayGen } from "../../../shared/global/utilities";
+// import { arrayGen } from "../../../shared/global/utilities";
 import styles from "../header.module.scss";
 
 interface IProps {
