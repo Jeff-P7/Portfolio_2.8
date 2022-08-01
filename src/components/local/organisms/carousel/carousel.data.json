@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Tabpik",
+    "description": "Tabpik is a tab manager that lets you organize your tabs by topics, with the purpose of continuing the use of those tabs across devices and for later use",
+    "languages": ["Typescript", "Javascript", "HTML", "SCSS"],
+    "technologies": [
+      "Angular",
+      "Chrome Extension API",
+      "Angular Material",
+      "RxJS"
+    ],
+    "tools": ["Chrome Developer Tools", "Zeplin", "Photoshop", "Webstorm"],
+    "images": ["tabpikOne", "tabpikTwo", "tabpikThree"],
+    "link": "#"
+  },
+  {
+    "title": "Tabpik",
+    "description": "Tabpik is a tab manager that lets you organize your tabs by topics, with the purpose of continuing the use of those tabs across devices and for later use",
+    "languages": ["Typescript", "Javascript", "HTML", "SCSS"],
+    "technologies": [
+      "Angular",
+      "Chrome Extension API",
+      "Angular Material",
+      "RxJS"
+    ],
+    "tools": ["Chrome Developer Tools", "Zeplin", "Photoshop", "Webstorm"],
+    "images": ["tabpikOne", "tabpikTwo", "tabpikThree"],
+    "link": "#"
+  }
+]

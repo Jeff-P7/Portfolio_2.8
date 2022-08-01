@@ -3,3 +3,10 @@
 @tailwind utilities;
 
 /* @import 'base.module.scss'; */
+
+.h-inherit {
+  height: inherit;
+}
+.stack {
+  flex-direction: 'column' !important;
+}

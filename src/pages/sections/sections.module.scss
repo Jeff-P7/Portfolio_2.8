@@ -1,0 +1,136 @@
+/**
+* Example of property order and category naming convention for comment
+********************************************************************************
+* .class {
+*  //________________________- Font & Text
+*    text-align: val;
+*    text-shadow: val;
+*  //________________________- Color & Background
+*    background-color: val;
+*    color: val;
+*    opacity: val;
+*  //________________________- Box
+*    height: val;
+*    width: val;
+*    border-radius: val;
+*  //________________________- Positioning
+*    position: absolute;
+*    bottom: 0;
+*  //________________________- List
+*    property: val;
+*  //________________________- Table
+*    property: val;
+*  //________________________- Miscellaneous
+*    property: val;
+*  //________________________- Effect
+*    property: val;
+* }
+*/
+
+// Imports ____________________________________________________________________-
+// @import '../../../styles/palette';
+
+/*******************************************************************************
+* Default |
+*********/
+
+
+// Intro -----------------------------------------------------------------------
+.intro__scroll__bar_mouse {
+  height: 30px;
+  width: 18px;
+  margin: 0 auto;
+  // border: 2px solid $palette-shady-white;
+  border: 2px solid white;
+  border-radius: 8px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    height: inherit;
+    width: inherit;
+    top: -2px;
+    left: -2px;
+    // border: 2px solid $palette-shady-white;
+    border: 2px solid white;
+    border-radius: 8px;
+    animation: pulse 2s ease infinite;
+    z-index: 0;
+  }
+
+  &::after {
+    height: 5px;
+    width: 2px;
+    border-radius: 1px;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    // background-color: $palette-shady-white;
+    background-color: white;
+  }
+}
+
+// Projects --------------------------------------------------------------------
+
+
+
+// Animation ___________________________________________________________________
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+// Active ______________________________________________________________________
+
+// Hover ______________________________________________________________________-
+
+// Layouts ____________________________________________________________________-
+
+// Media Sizes ________________________________________________________________-
+
+/*******************************************************************************
+  * XS |
+  ****/
+
+//@include mq('xs') {
+//
+//}
+
+/*******************************************************************************
+  * SM |
+  ****/
+
+//@include mq('sm') {
+//
+//}
+
+/*******************************************************************************
+  * MD |
+  ****/
+
+//@include mq('md') {
+//
+//}
+
+/*******************************************************************************
+  * LG |
+  ****/
+
+//@include mq('lg') {
+//
+//}
