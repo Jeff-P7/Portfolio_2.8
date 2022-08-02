@@ -1,12 +1,4 @@
-type TProject = {
-  title: string;
-  description: string;
-  languages?: Array<string>;
-  technologies?: Array<string>;
-  tools?: Array<string>;
-  images?: Array<string>;
-  link?: string;
-};
+import type { TProject } from './carousel.d';
 
 const projects: Array<TProject> = [
   {
