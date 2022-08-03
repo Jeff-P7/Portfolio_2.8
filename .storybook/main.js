@@ -7,7 +7,7 @@ module.exports = {
     // '@storybook/addon-measure',
     // '@storybook/addon-outline',
     'storybook-formik/register',
-    // 'storybook-addon-next',
+    'storybook-addon-next',
     // 'storybook-addon-material-ui',
     {
       name: '@storybook/addon-postcss',
