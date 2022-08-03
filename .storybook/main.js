@@ -4,9 +4,10 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-storysource',
-    '@storybook/addon-measure',
-    '@storybook/addon-outline',
+    // '@storybook/addon-measure',
+    // '@storybook/addon-outline',
     'storybook-formik/register',
+    // 'storybook-addon-next',
     // 'storybook-addon-material-ui',
     {
       name: '@storybook/addon-postcss',
@@ -22,4 +23,7 @@ module.exports = {
       },
     },
   ],
+  core: {
+    builder: 'webpack5',
+  },
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Header from './header.component';
 import HeaderProps from './header.props';
-import { propToArgTypes } from '../../shared';
+import { propToArgTypes } from '../../../shared';
 
 //👇 This default export determines where your story goes in the story list
 export default {

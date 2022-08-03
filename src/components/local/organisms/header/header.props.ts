@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import IHeader from './header';
-import type { IPropDefines } from '../../shared';
-import { CommonProps } from '../../shared';
+import type { IPropDefines } from '../../../shared';
+import { CommonProps } from '../../../shared';
 
 /**
  * Property categorical types of defines

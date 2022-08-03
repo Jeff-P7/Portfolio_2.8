@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 // import Head from "next/head";
 // import Image from "next/image";
 // import styles from "../styles/Home.module.css";
-import { Header } from '../components/local/header';
+import { Header } from '../components/local';
 import { Div, Head } from '../components/shared/atomicUI/atoms';
 import { SocialLinks } from '../components/shared/atomicUI/molecules';
 import { Container, Row, Col } from '../components/shared/grids';

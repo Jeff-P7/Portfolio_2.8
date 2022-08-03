@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import IHeader from './header';
 import HeaderProps from './header.props';
 import classNames from 'classnames';
-import { classesToString, purgeEmptyProps } from '../../shared';
-import { Div, Text, Image } from '../../shared/atomicUI/atoms';
-import { Container, Row, Col } from '../../shared/grids';
+import { classesToString, purgeEmptyProps } from '../../../shared';
+import { Div, Text, Image } from '../../../shared/atomicUI/atoms';
+import { Container, Row, Col } from '../../../shared/grids';
 import HeaderNav from './subcomponents/headerNav.component';
 
 // interface IProps extends IHeader {}
