@@ -1,19 +1,8 @@
-import React, { FC } from 'react';
-import { Div, Row, Col, Text } from '../../components/shared';
+import React, { FC, useState } from 'react';
 
 /**
  * Projects Component
  */
-export const Projects: FC = (): JSX.Element => <Div classes="h-96"></Div>;
+export const Projects: FC = (): JSX.Element => {return <div></div>;};
 
 export default Projects;
-
-const Carousel: FC = (props): JSX.Element => {
-  
-
-  return (
-    <Div margin="y-28" colorize>
-     <Row></Row>
-    </Div>
-  );
-};

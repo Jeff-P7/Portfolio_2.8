@@ -12,7 +12,7 @@ export type TProject = {
     link?: string;
   };
 export interface ICarousel {
-    data: TProject;
+    data: Array<TProject>;
 }
 
 export default ICarousel;

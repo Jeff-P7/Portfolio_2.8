@@ -1,0 +1,1 @@
+export { default as ProjectsData } from './projects.data';

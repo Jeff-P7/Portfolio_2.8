@@ -7,6 +7,7 @@ import { Div, Head } from '../components/shared/atomicUI/atoms';
 import { SocialLinks } from '../components/shared/atomicUI/molecules';
 import { Container, Row, Col } from '../components/shared/grids';
 import Intro from './sections/intro.component';
+import Projects from './sections/projectsTEMP.component';
 
 const Home: NextPage = () => (
   <Div colorize highlight>
@@ -18,16 +19,12 @@ const Home: NextPage = () => (
     <Header />
     <main>
       <Div classes="fixed bottom-3 left-3">
-        <SocialLinks />
+        {/* <SocialLinks /> */}
       </Div>
       <Container>
         <Row stack>
-          <Col margin="y-36" colorize>
-            <Intro />
-          </Col>
-          <Col margin="y-36" colorize>
-            Projects
-          </Col>
+          <Col margin="y-36" colorize><Intro /></Col>
+          <Col margin="y-36" colorize><Projects /></Col>
           <Col classes="h-full" margin="y-36" colorize>
             Experience
           </Col>
