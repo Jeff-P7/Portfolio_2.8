@@ -6,6 +6,8 @@ import { classesToString, purgeEmptyProps } from '../../../shared/global';
 import { Div, Row, Col, Text } from '../../../shared';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import styles from './carousel.module.scss';
+import ImageSlider from '../imageSlider';
+
 
 interface IProps extends ICarousel {}
 
@@ -19,7 +21,7 @@ export const Carousel: FC<IProps> = (props): JSX.Element => {
   const stepsList = data ? data.map((item: any) => item.title) : [];
 
   const handleNext = (e) => e.preventDefault() || setActiveStep(activeStep + 1);
-  const handleBack = (e) => e.preventDefault() || setActiveStep(activeStep - 1);
+  const handlePrev = (e) => e.preventDefault() || setActiveStep(activeStep - 1);
 
   return (
     <Div classes={styles.carousel} margin="y-28" colorize>
@@ -30,7 +32,7 @@ export const Carousel: FC<IProps> = (props): JSX.Element => {
       </Row>
       <Row classes="h-inherit">
         <Col classes={styles.carousel__nav} align="center" colorize>
-          <button type="button" onClick={handleBack} disabled={activeStep <= 0}>
+          <button type="button" onClick={handlePrev} disabled={activeStep <= 0}>
             <MdKeyboardArrowLeft size="2x" />
           </button>
         </Col>
@@ -84,44 +86,39 @@ const ProjectInfo = ({ projectData }): JSX.Element => {
         <Col>
           <Row stack>
             <Col classes={styles.carousel__project} padding="y-3" colorize>
-              <Text size="xl">Project</Text>
-              <Text size="xl">{description || 'Waiting'}</Text>
+              <Text tag="h4" value={title} />
+              <Text tag="h5" value={description || 'Waiting'} />
             </Col>
             <Col classes={styles.carousel__project} padding="y-3" colorize>
-              <Text size="xl">Languages</Text>
+              <Text tag="h4" value="Languages" />
               {languages
                 ? languages.map((item: string, index: number) => (
-                    <Text size="xl" key={`${item}-${index}`}>
-                      {item}
-                    </Text>
+                    <Text tag="h5" key={`${item}-${index}`} value={item} />
                   ))
                 : ''}
             </Col>
           </Row>
         </Col>
         <Col size={8}>
+          <ImageSlider />
           {/* <ImageCarousel projectTitle={title} imageList={images} /> */}
         </Col>
         {/* </Row>
       <Row> */}
         <div className="w-full" />
         <Col classes={styles.carousel__project} padding="y-3" colorize>
-          <Text size="xl">Technologies</Text>
+          <Text tag="h4" value="Technologies" />
           {technologies
             ? technologies.map((item: string, index: number) => (
-                <Text size="xl" key={`${item}-${index}`}>
-                  {item}
-                </Text>
+                <Text tag="h5" key={`${item}-${index}`} value={item} />
               ))
             : ''}
         </Col>
         <Col classes={styles.carousel__project} padding="y-3" colorize>
-          <Text size="xl">Tools</Text>
+          <Text tag="h4" value="Tools" />
           {tools
             ? tools.map((item: string, index: number) => (
-                <Text size="xl" key={`${item}-${index}`}>
-                  {item}
-                </Text>
+                <Text tag="h5" key={`${item}-${index}`} value={item} />
               ))
             : ''}
         </Col>
