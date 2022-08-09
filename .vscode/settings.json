@@ -1,10 +1,33 @@
 {
-    "cSpell.words": [
-        "devdependencies",
-        "Photoshop",
-        "subcomponents",
-        "Tabpik",
-        "Webstorm",
-        "Zeplin"
-    ]
+  "cSpell.words": [
+    "devdependencies",
+    "Photoshop",
+    "subcomponents",
+    "Tabpik",
+    "Webstorm",
+    "Zeplin"
+  ],
+  "editor.rulers": [80, 120],
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  // "editor.rulers": [80, 100, 120],
+  // Stylelint setup
+  "css.validate": false, // Disable css built-in lint
+  "scss.validate": false, // Disable scss lint (optional if using scss)
+  "stylelint.enable": true, // Enable sytlelint
+  // Set the material icon theme inside user settings if desired
+  "material-icon-theme.activeIconPack": "react",
+  "material-icon-theme.folders.associations": {
+    "container": ""
+  },
+  "material-icon-theme.files.associations": {
+    "*.interface.ts": "typescript-def",
+    "*.interfaces.ts": "typescript-def"
+  },
+  "editor.wordWrapColumn": 100,
+  "eslint.format.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
