@@ -11,11 +11,17 @@ import { arrayGen } from '../../../shared/global/utilities/functions';
 
 interface IProps extends IImageSlider {}
 
+// const images = [
+//   'https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80',
+//   'https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80',
+//   'https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80',
+//   'https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80',
+// ];
+
 const images = [
-  "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
-  "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+  './assets/images/tabpik/tabpik-1.png',
+  './assets/images/tabpik/tabpik-2.png',
+  './assets/images/tabpik/tabpik-3.png',
 ];
 
 /**
@@ -32,6 +38,7 @@ export const ImageSlider: FC<IProps> = (props): JSX.Element => {
       },
       loop: true,
       initial: 0,
+      // rubberband: false,
       vertical: true,
     },
     [
@@ -76,12 +83,18 @@ export const ImageSlider: FC<IProps> = (props): JSX.Element => {
   return (
     <Div classes="relative" colorize>
       <Div classes="w-11/12 rounded-2xl" colorize>
-        <div ref={sliderRef} className="keen-slider">
-        {images.map((src, idx) => (
-        <Div key={idx} classes="keen-slider__slide lazy__slide number-slide1 h-20">
-          <img src={loaded[idx] ? src : ""} />
-        </Div>
-      ))}
+        <div ref={sliderRef} className="z-10 h-96 keen-slider">
+          {images.map((src, idx) => (
+            <Div
+              key={idx}
+              classes="keen-slider__slide lazy__slide number-slide1 h-20 hidden"
+            >
+              <img
+                src={loaded[idx] ? src : ''}
+                className={`number-slide${idx}`}
+              />
+            </Div>
+          ))}
           {/* {Array(6).map((item: number) => (
             <Div
               classes={`keen-slider__slide lazy__slide ${'number-slide'}${item}`}
@@ -97,8 +110,16 @@ export const ImageSlider: FC<IProps> = (props): JSX.Element => {
           <div className={`keen-slider__slide ${'number-slide6'}`}>6</div> */}
         </div>
       </Div>
-      <Div classes="absolute right-0 bottom-0" colorize>
-        Buttons
+      <Div
+        classes="absolute z-0 -right-2 -bottom-16 w-96 h-40 rounded-2xl" colorize>
+        <Div classes="left-2 bottom-2 absolute" colorize>
+          <Text tag="h4" value={'01'} classes="inline text-center" />
+          <Div classes="h-16 w-60 inline-block" colorize />
+          <Text tag="h4" value={'06'} classes="inline" />
+        </Div>
+        <Div classes="absolute right-0" colorize>
+          Buttons
+        </Div>
       </Div>
     </Div>
   );

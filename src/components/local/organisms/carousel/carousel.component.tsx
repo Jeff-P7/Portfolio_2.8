@@ -83,7 +83,7 @@ const ProjectInfo = ({ projectData }): JSX.Element => {
   return (
     <>
       <Row>
-        <Col>
+        <Col classes="h-auto">
           <Row stack>
             <Col classes={styles.carousel__project} padding="y-3" colorize>
               <Text tag="h4" value={title} />
@@ -99,7 +99,7 @@ const ProjectInfo = ({ projectData }): JSX.Element => {
             </Col>
           </Row>
         </Col>
-        <Col size={8}>
+        <Col classes="h-full" size={8}>
           <ImageSlider />
           {/* <ImageCarousel projectTitle={title} imageList={images} /> */}
         </Col>
