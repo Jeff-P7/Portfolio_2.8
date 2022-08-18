@@ -115,12 +115,12 @@ export const ImageSlider: FC<IProps> = (props): JSX.Element => {
         classes="absolute z-0 right-3 -bottom-16 w-96 h-40 rounded-2xl flex" colorize>
         <Col align="end" classes="mb-3 flex items-center flex-wrap content-between" colorize>
           <Text tag="h4" value="01" classes="text-center" />
-          <Div classes="h-2 w-44 my-1" colorize />
+          <Div classes="h-2 w-44 my-1 rounded-2xl" colorize />
           <Text tag="h4" value="06" />
         </Col>
         <Col size="auto" align="center" colorize>
-          <Icon value="BsArrowUpCircle" size="4xl" classes="mb-10"/>
-          <Icon value="BsArrowDownCircle" size="4xl"/>
+          <Icon value="BsArrowUpCircle" size="4xl" classes="mb-10 cursor-pointer" />
+          <Icon value="BsArrowDownCircle" size="4xl" classes="cursor-pointer"/>
         </Col>
         {/* <Div classes="left-2 bottom-2 absolute" colorize>
           <Text tag="h4" value={'01'} classes="inline text-center" />
